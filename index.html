@@ -1,0 +1,151 @@
+<!doctype html>
+<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
+<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on http://github.com/jonrohan -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen"/>
+  <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/script.js"></script>
+
+  <title>Smail</title>
+  <meta name="description" content="SMS texting API that uses carrier-specific gateways to deliver messages via Sendmail. No third party APIs required.">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header>
+      <h1 class="title">Smail</h1>
+    </header>
+    <div id="container">
+      <p class="tagline">SMS texting API that uses carrier-specific gateways to deliver messages via Sendmail. No third party APIs required.</p>
+      <div id="main" role="main">
+        <div class="download-bar">
+        <div class="inner">
+          <a href="https://github.com/euforic/smail/tarball/master" class="download-button tar"><span>Download</span></a>
+          <a href="https://github.com/euforic/smail/zipball/master" class="download-button zip"><span>Download</span></a>
+          <a href="https://github.com/euforic/smail" class="code">View Smail on GitHub</a>
+        </div>
+        <span class="blc"></span><span class="trc"></span>
+        </div>
+        <article class="markdown-body">
+          <h1>Smail - Free sms client</h1>
+
+<p>Smail is a SMS texting API that uses carrier-specific gateways to deliver SMS messages via Sendmail.
+No dependencies or 3rd party APIs required.</p>
+
+<h2>Requirements</h2>
+
+<ul>
+<li>Node.js</li>
+<li>Sendmail</li>
+</ul><h2>Installing</h2>
+
+<div class="highlight"><pre><span class="nv">$ </span>npm install smail
+</pre></div>
+
+<h2>Usage</h2>
+
+<div class="highlight"><pre><span class="c1">// Require the module</span>
+<span class="kd">var</span> <span class="nx">smail</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'smail'</span><span class="p">);</span>
+
+<span class="c1">// Message parameters</span>
+<span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">to</span><span class="o">:</span> <span class="s1">'5554446666'</span><span class="p">,</span>
+  <span class="nx">from</span><span class="o">:</span><span class="s1">'5551112222'</span><span class="p">,</span>
+  <span class="nx">text</span><span class="o">:</span><span class="s1">'Test SMS from Smail'</span>
+  <span class="c1">// If you already know the carrier set the optional parameter</span>
+  <span class="c1">// For a list of carrier names see `lib/providers`</span>
+  <span class="c1">//carrier:'CARRIER_NAME'</span>
+<span class="p">};</span>
+
+<span class="c1">// Create new smail instance</span>
+<span class="kd">var</span> <span class="nx">sms</span> <span class="o">=</span> <span class="nx">smail</span><span class="p">(</span><span class="cm">/*Optional option defaults object*/</span><span class="p">);</span>
+
+
+<span class="c1">// Send the SMS</span>
+<span class="c1">// Options passed to send will override th default options for the message</span>
+<span class="nx">sms</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">options</span><span class="p">,</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">){</span>
+  <span class="c1">// Do something...</span>
+<span class="p">});</span>
+</pre></div>
+
+<h2>Custom Providers List</h2>
+
+<p>TODO</p>
+
+<h2>Supported Carriers</h2>
+
+<p>Carrier list is located in <code>lib/providers</code></p>
+
+<ul>
+<li>U.S. Providers
+
+<ul>
+<li>Alltel, Ameritech, AT&amp;T Wireless, Boost, CellularOne, Cingular, Edge Wireless, Sprint PCS, Telus Mobility, T-Mobile, Metro PCS, Nextel, O2, Orange, Qwest, Rogers Wireless, US Cellular, Verizon, Virgin Mobile.</li>
+</ul>
+</li>
+</ul><h2>License</h2>
+
+<p>(The MIT License)</p>
+
+<p>Copyright (c) 2012 Christian Sullivan &lt;<a href="mailto:cs@euforic.co">cs@euforic.co</a>&gt;</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="owner">
+      <p><a href="https://github.com/euforic" class="avatar"><img src="https://secure.gravatar.com/avatar/b5592b120085752df544f3bc1ecbb4b0?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png" width="48" height="48"/></a> <a href="https://github.com/euforic">euforic</a> maintains <a href="https://github.com/euforic/smail">Smail</a></p>
+
+
+      </div>
+      <div class="creds">
+        <small>This page generated using <a href="https://pages.github.com/">GitHub Pages</a><br/>theme by <a href="http://twitter.com/jonrohan/">Jon Rohan</a></small>
+      </div>
+    </footer>
+  </div>
+  <div class="current-section">
+    <a href="#top">Scroll to top</a>
+    <a href="https://github.com/euforic/smail/tarball/master" class="tar">tar</a><a href="https://github.com/euforic/smail/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
+    <p class="name"></p>
+  </div>
+
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-26026539-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+</body>
+</html>
