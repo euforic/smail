@@ -1,0 +1,26 @@
+{
+  "name": "smail",
+  "version": "0.0.1",
+  "description": "SMS texting API that uses carrier-specific gateways to deliver messages via Sendmail.",
+  "main": "index.js",
+  "directories": {
+    "example": "examples",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/euforic/smail.git"
+  },
+  "keywords": [
+    "sms",
+    "texting",
+    "text-message",
+    "message",
+    "chat"
+  ],
+  "author": "Christian Sullivan <cs@euforic.co>",
+  "license": "MIT"
+}
